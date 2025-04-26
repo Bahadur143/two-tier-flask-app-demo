@@ -26,7 +26,7 @@ services:
   flask-app:
     build: 
       context: .
-    container_name: flask-app
+    container_name: two-tier-flaskapp
     ports:
       - "5000:5000"
     environment:
