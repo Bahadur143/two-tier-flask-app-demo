@@ -34,5 +34,25 @@ pipeline {
         }
     }
 }
+post {
+            success {
+                script {
+                    emailext from: "anilsahu350@gmail.com"
+                             to: "anilsahu350@gmail.com"
+                             body: "Build success for CICD"
+                             subject: "Build Success"
+                }
+            }
+    failure {
+                script {
+                    emailext from: "anilsahu350@gmail.com"
+                             to: "anilsahu350@gmail.com"
+                             body: "Build failure for CICD"
+                             subject: "Build failure"
+                }
+            }
+        }
+
+    
         
         
